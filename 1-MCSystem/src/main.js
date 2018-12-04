@@ -10,6 +10,8 @@ import Mint from 'mint-ui';
 import 'mint-ui/lib/style.css';
 Vue.use(Mint);
 
+import './static/vendor/mui/dist/css/mui.css'
+
 import Axios from 'axios';
 //挂载原型
 Vue.prototype.$ajax = Axios;

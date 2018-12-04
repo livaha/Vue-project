@@ -41,6 +41,14 @@ const htmlWebpackPlugin = require('html-webpack-plugin');
                         loader: "css-loader"
                     }
                 ]
+            },
+            {
+                test: /\.(jpg|png|svg|ttf|woff|woff2|gif)$/,
+                loader: 'url-loader',
+                options: {
+                    limit: 4096, //4096字节以上生成文件，否则base6
+                    name: '[name].[ext]'
+                }
             }
         ]
       },

@@ -31,6 +31,7 @@ import Home from './components/home/home.vue'
 import VIP from './components/vip/vip.vue'
 import Shopcar from './components/shopcar/shopcar.vue'
 import Search from './components/search/search.vue'
+import NewsList from './components/news/newsList.vue'
 
 
 
@@ -44,6 +45,7 @@ let router = new VueRouter({
 		{name:'vip',path:'/vip',component:VIP},
 		{name:'shopcar',path:'/shopcar',component:Shopcar},
 		{name:'search',path:'/search',component:Search},
+		{name:'news.list',path:'/news/list',component:NewsList},
 	]
 })
 

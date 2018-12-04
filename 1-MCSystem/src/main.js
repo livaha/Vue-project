@@ -10,12 +10,15 @@ import Mint from 'mint-ui';
 import 'mint-ui/lib/style.css';
 Vue.use(Mint);
 
+//MUI:引入mui的样式
 import './static/vendor/mui/dist/css/mui.css'
+//全局样式
+import './static/css/global.css';
 
 import Axios from 'axios';
 //挂载原型
 Vue.prototype.$ajax = Axios;
-Axios.defaults.baseUrl = 'http://182.254.146.100:8899/api/';
+Axios.defaults.baseUrl = 'http://127.0.0.1:8899/';
 
 import Moment from 'moment';
 

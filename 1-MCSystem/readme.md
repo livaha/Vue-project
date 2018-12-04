@@ -30,11 +30,30 @@ webpack.config.js
 
 
 
+# vue-router 
 
+https://router.vuejs.org/zh/api/#append
 
+router-link
 
+### active-class
 
+- 类型: `string`
 
+- 默认值: `"router-link-active"`
+
+  设置 链接激活时使用的 CSS 类名。默认值可以通过路由的构造选项 `linkActiveClass`来全局配置。
+
+~~~
+
+let router = new VueRouter({
+    linkActiveClass:'mui-active',
+	routes:[
+		{path:'/',redirect:{name:'home'}},//重定向
+		{name:'home',path:'/home',component:Home}
+	]
+})
+~~~
 
 
 

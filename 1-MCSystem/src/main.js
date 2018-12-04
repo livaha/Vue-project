@@ -28,15 +28,22 @@ import Moment from 'moment';
 /*引入自定义组件*/
 import App from './app.vue';
 import Home from './components/home/home.vue'
+import VIP from './components/vip/vip.vue'
+import Shopcar from './components/shopcar/shopcar.vue'
+import Search from './components/search/search.vue'
 
 
 
 
 /*VueRouter:创建对象并配置路由规则！--导航*/
 let router = new VueRouter({
+    linkActiveClass:'mui-active',
 	routes:[
 		{path:'/',redirect:{name:'home'}},//重定向
-		{name:'home',path:'/home',component:Home}
+		{name:'home',path:'/home',component:Home},
+		{name:'vip',path:'/vip',component:VIP},
+		{name:'shopcar',path:'/shopcar',component:Shopcar},
+		{name:'search',path:'/search',component:Search},
 	]
 })
 

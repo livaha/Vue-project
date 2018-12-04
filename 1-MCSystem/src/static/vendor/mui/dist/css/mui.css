@@ -4263,11 +4263,6 @@ body>.mui-progressbar {
 
 
 
-
-
-
-
-
 /*引入自定义的字体图标*/
 
 @font-face {
@@ -4276,6 +4271,7 @@ body>.mui-progressbar {
     font-style: normal;
     src: url('../fonts/iconfont.ttf') format('truetype');
 }
+
 
 .mui-icon {
     font-family: Muiicons;
@@ -4656,33 +4652,14 @@ body>.mui-progressbar {
 
 /*引入自定义的样式*/
 
-.icon-shouye1:before {
-    content: "\e6cc";
-}
 
-.icon-diamond:before {
-    content: "\e653";
-}
+.icon-gouwuche:before { content: "\e63f"; }
 
-.icon-huiyuan1:before {
-    content: "\e60f";
-}
+.icon-shouye:before { content: "\e651"; }
 
-.icon-gouwucheman:before {
-    content: "\e600";
-}
+.icon-chazhao:before { content: "\e609"; }
 
-.icon-huiyuan:before {
-    content: "\e61f";
-}
-
-.icon-huiyuan2:before {
-    content: "\e601";
-}
-
-.icon-icon:before {
-    content: "\e602";
-}
+.icon-huiyuan:before { content: "\e61c"; }
 
 
 

@@ -10,8 +10,28 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const portfinder = require('portfinder')
 
+
+const express = require('express')
+
 const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
+
+
+let app = express()
+
+let appData = require('../data.json');
+let seller = appData.seller;
+let goods = appData.goods;
+let ratings = appData.ratings;
+
+let apiRoutes = express.Router();
+
+//奇怪这里已经不起作用了,只能在下面手动添加
+//app.use('/api', apiRoutes);
+
+
+
+
 
 const devWebpackConfig = merge(baseWebpackConfig, {
   module: {
@@ -22,6 +42,26 @@ const devWebpackConfig = merge(baseWebpackConfig, {
 
   // these devServer options should be customized in /config/index.js
   devServer: {
+    before(app){
+      app.get('/api/seller', function (req, res) {
+        res.json({
+          errno: 0,
+          data: seller
+        });
+      });
+      app.get('/api/goods', function (req, res) {
+        res.json({
+          errno: 0,
+          data: goods
+        });
+      });
+      app.get('/api/ratings', function (req, res) {
+        res.json({
+          errno: 0,
+          data: ratings
+        });
+      });
+    },
     clientLogLevel: 'warning',
     historyApiFallback: {
       rewrites: [

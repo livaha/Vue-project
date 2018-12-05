@@ -57,10 +57,47 @@ app.use(bodyParser());
   })
 
 
+  router.get('/getimgcategory', ctx => {
+    console.log(ctx.params);
+    ctx.response.body={
+      status:0,
+      message:Data.ImgCategory
+    };
+
+  })
 
 
 
+  router.get('/getimages/:id', ctx => {
+    console.log(ctx.params);
+    ctx.response.body={
+      status:0,
+      message:Data.ImagesMessage[ctx.params.id]
+    };
 
+    console.log(Data.ImagesMessage[ctx.params.id]);
+  })
+
+
+  router.get('/getthumimages/:imgid', ctx => {
+    //console.log(ctx.params);
+    ctx.response.body={
+      status:0,
+      message:Data.ThumImages[ctx.params.id]
+    };
+
+  })
+
+
+
+  router.get('/getimageinfo/:imgid', ctx => {
+    //console.log(ctx.params);
+    ctx.response.body={
+      status:0,
+      message:Data.ImgInfo[ctx.params.id]
+    };
+
+  })
 
 
 

@@ -29,7 +29,7 @@ Vue.component('navBar',NavBar);//使用最好以nav-bar
 /*定义全局过滤器*/
 /*convertDate为过滤器名，value为要过滤的值*/
 Vue.filter('convertDate',function(value){
-	console.log(value);
+	//console.log(value);
 	return Moment(value).format('YYYY-MM-DD');
 });
 
@@ -42,6 +42,8 @@ import Shopcar from './components/shopcar/shopcar.vue'
 import Search from './components/search/search.vue'
 import NewsList from './components/news/newsList.vue'
 import NewsDetail from './components/news/newsDetail.vue'
+import PhotoShare from './components/photo/photoShare.vue'
+import PhotoDetail from './components/photo/photoDetail.vue'
 
 
 
@@ -57,6 +59,8 @@ let router = new VueRouter({
 		{name:'search',path:'/search',component:Search},
 		{name:'news_list',path:'/news/list',component:NewsList},
 		{name:'news_detail',path:'/news/detail',component:NewsDetail},
+		{name:'photoShare',path:'/photo/share',component:PhotoShare},
+		{name:'photoDetail',path:'/photo/detail/:id',component:PhotoDetail},
 	]
 })
 

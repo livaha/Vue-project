@@ -129,3 +129,171 @@ exports.NewsMessage = [{
         "click":1,
         "img_url":"https://img01.sogoucdn.com/app/a/100520093/12400ee0679b6e1e-d3e639ff657519ea-a9d4d43a8f00e80cfae6b8f74af91564.jpg"        
       }]
+
+
+
+// 获取分类 getimgcategory
+exports.ImgCategory = [{
+	title:"家居生活",
+	id:1
+},{
+	title:"摄影设计",
+	id:2
+},{
+	title:"美妆华华华",
+	id:3
+},{
+	title:"美女华华华",
+	id:4
+},{
+	title:"美人华华华",
+	id:5
+},{
+	title:"美艳华华华",
+	id:6
+},{
+	title:"爱美华华华",
+	id:7
+}]
+
+
+
+exports.ImagesMessage = [{
+	id:0,
+    status:0,
+    message:[{
+    	id:1,
+		title:"超级烦人的",
+		img_url:"https://i01picsos.sogoucdn.com/a01374bc51c0ba18",
+		zhaiyao:"生活的美在于动~！"
+    },{
+		id:2,
+		title:"你就是一个美女",
+		img_url:"https://bj.bcebos.com/v1/gaopin-preview/133109009805.jpg%40%21sougou305?authorization=bce-auth-v1%2F8297d8317b7e4592b641a2ee98e08e95%2F2017-12-27T10%3A16%3A57Z%2F-1%2F%2F52e8e575b60ef8d6b7d6babb391de03f39254ec720b767687451ad9e0e40cf76",
+		zhaiyao:"生活的美在于动~！"
+	},{
+		id:3,
+		title:"你就是一个美女",
+		img_url:"https://p.pstatp.com/weili/bl/79053288326223663.jpg",
+		zhaiyao:"生活的美在于动~！"
+	},{
+    	id:1,
+		title:"你就是一个美女",
+		img_url:"https://p.pstatp.com/weili/bl/79053683463180752.jpg",
+		zhaiyao:"生活的美在于动~！"
+    },{
+		id:2,
+		title:"你就是一个美女",
+		img_url:"https://i01picsos.sogoucdn.com/a01374bc51c0ba18",
+		zhaiyao:"生活的美在于动~！"
+	},{
+		id:3,
+		title:"你就是一个美女",
+		img_url:"https://i01picsos.sogoucdn.com/a01374bc51c0ba18",
+		zhaiyao:"生活的美在于动~！"
+	}]
+},{
+	id:1,
+    status:0,
+    message:[{
+    	id:1,
+		title:"你就是一个美女",
+		img_url:"https://p.pstatp.com/weili/bl/79053288326223663.jpg",
+		zhaiyao:"生活的美在于动~！"
+    },{
+		id:2,
+		title:"你就是一个美女",
+		img_url:"https://i01picsos.sogoucdn.com/a01374bc51c0ba18",
+		zhaiyao:"生活的美在于动~！"
+	},{
+		id:3,
+		title:"你就是一个美女",
+		img_url:"https://i01picsos.sogoucdn.com/a01374bc51c0ba18",
+		zhaiyao:"生活的美在于动~！"
+	}]
+},{
+	id:2,
+    status:0,
+    message:[{
+    	id:1,
+		title:"千辛万苦来看你。。。",
+		img_url:"https://img.zcool.cn/community/014565554b3814000001bf7232251d.jpg@1280w_1l_2o_100sh.png",
+		zhaiyao:"生活的美在于动~！"
+    },{
+		id:2,
+		title:"你就是一个美女",
+		img_url:"https://img.zcool.cn/community/014565554b3814000001bf7232251d.jpg@1280w_1l_2o_100sh.png",
+		zhaiyao:"生活的美在于动~！"
+	},{
+		id:3,
+		title:"你就是一个美女",
+		img_url:"https://img.zcool.cn/community/014565554b3814000001bf7232251d.jpg@1280w_1l_2o_100sh.png",
+		zhaiyao:"生活的美在于动~！"
+	}]
+},{
+	id:3,
+    status:0,
+    message:[{
+    	id:1,
+		title:"你就是一个美女",
+		img_url:"https://p.pstatp.com/weili/bl/79053288326223663.jpg",
+		zhaiyao:"生活的美在于动~！"
+    },{
+		id:2,
+		title:"你就是一个美女",
+		img_url:"https://p.pstatp.com/weili/bl/79053288326223663.jpg",
+		zhaiyao:"生活的美在于动~！"
+	},{
+		id:3,
+		title:"你就是一个美女",
+		img_url:"https://i01picsos.sogoucdn.com/a01374bc51c0ba18",
+		zhaiyao:"生活的美在于动~！"
+	}]
+}]
+
+
+/*这样子写并不行，因为它是需要多个嵌套的
+// 获取图片  getimages/1
+exports.ImagesMessage = [{
+	id:1,
+	title:"你就是一个美女05555",
+	img_url:"https://i01picsos.sogoucdn.com/a01374bc51c0ba18",
+	zhaiyao:"生活的美在于动~！"
+},{
+	id:2,
+	title:"你就是一个美女",
+	img_url:"https://i01picsos.sogoucdn.com/a01374bc51c0ba18",
+	zhaiyao:"生活的美在于动~！"
+},{
+	id:3,
+	title:"你就是一个美女",
+	img_url:"https://i01picsos.sogoucdn.com/a01374bc51c0ba18",
+	zhaiyao:"生活的美在于动~！"
+}]
+*/
+
+//获取图 根据路由参数id  
+//getthumimages/:imgid
+exports.ThumImages = [{
+	src:"https://p.pstatp.com/weili/bl/79053288326223663.jpg"
+},{
+	src:"https://p.pstatp.com/weili/bl/79053399995375229.jpg"
+},{
+	src:"https://p.pstatp.com/weili/bl/79053683463180752.jpg"
+},{
+	src:"https://bj.bcebos.com/v1/gaopin-preview/133109009805.jpg%40%21sougou305?authorization=bce-auth-v1%2F8297d8317b7e4592b641a2ee98e08e95%2F2017-12-27T10%3A16%3A57Z%2F-1%2F%2F52e8e575b60ef8d6b7d6babb391de03f39254ec720b767687451ad9e0e40cf76"
+}]
+
+
+//获取详情数据
+//  getimageinfo/:imgid
+exports.ImgInfo = [{
+	id:1, //图片id
+	title:"美瑜珈",//图片标题
+	click:3,
+	add_time:"2018-12-05T17:47:07.000Z",
+	content:"瑜伽（英文：Yoga，印地语：योग）是一个汉语词汇，最早是从印度梵语“yug”或“yuj”而来，其含意为“一致”、“结合”或“和谐”，源于古印度。"
+}]
+
+
+

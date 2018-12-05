@@ -26,9 +26,10 @@
             //发起请求
             this.$ajax.get('http://127.0.0.1:8899/newslist/'+id)
             .then(res=>{
-                console.log(res.data.message);
+                //console.log(res.data.message);
                 //3:响应回来渲染页面
                 this.newsList=res.data.message;
+                console.log(this.newsList);
             })
             .catch(err=>{
                 console.log(err);

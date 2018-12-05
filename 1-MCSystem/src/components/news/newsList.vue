@@ -3,7 +3,8 @@
     		<nav-bar title="新闻列表"></nav-bar>
 			<ul class="mui-table-view">
 				<li v-for="news in newsList" :key="news.id" class="mui-table-view-cell mui-media">
-					<router-link :to="{name:'news.detail',query:{id:news.id} }">
+					<!--跳转到新闻详情-->
+					<router-link :to="{name:'news_detail',query:{id:news.id} }">
 						<img class="mui-media-object mui-pull-left" :src="news.img_url">
 						<div class="mui-media-body">
 							<span v-text="news.zhaiyao"></span>

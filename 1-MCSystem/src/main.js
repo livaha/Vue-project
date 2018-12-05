@@ -41,6 +41,7 @@ import VIP from './components/vip/vip.vue'
 import Shopcar from './components/shopcar/shopcar.vue'
 import Search from './components/search/search.vue'
 import NewsList from './components/news/newsList.vue'
+import NewsDetail from './components/news/newsDetail.vue'
 
 
 
@@ -54,7 +55,8 @@ let router = new VueRouter({
 		{name:'vip',path:'/vip',component:VIP},
 		{name:'shopcar',path:'/shopcar',component:Shopcar},
 		{name:'search',path:'/search',component:Search},
-		{name:'news.list',path:'/news/list',component:NewsList},
+		{name:'news_list',path:'/news/list',component:NewsList},
+		{name:'news_detail',path:'/news/detail',component:NewsDetail},
 	]
 })
 

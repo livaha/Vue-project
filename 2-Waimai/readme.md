@@ -188,13 +188,19 @@ https://icomoon.io/
 
 
 
-# 4 安装 jsonview插件
+# 4 安装 jsonview插件(可忽略)
 
 
 
+# 5 使用cssreset官网提供的默认样式
 
+1 引入默认样式  https://cssreset.com/
 
+2 视口   适应移动端
 
+3 .eslintrc.js文件
 
+//严格格式加';'
 
+'semi': ['error', 'always']
 

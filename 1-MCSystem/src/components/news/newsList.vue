@@ -8,6 +8,7 @@
 							<span v-text="news.zhaiyao"></span>
 	                        <div class="news-desc">
 	                            <p>点击数:{{news.click}}</p>
+	                            <!--convertDate为过滤器名-->
 	                            <p>发表时间:{{news.add_time | convertDate}}</p>
 	                        </div>
 						</div>

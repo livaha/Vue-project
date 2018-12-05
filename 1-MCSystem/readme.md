@@ -59,11 +59,21 @@ let router = new VueRouter({
 
 
 
+# momentjs
+
+操作日期的
 
 
 
+![1543954840439](assets/1543954983015.png)
 
 
+
+时间格式化+过滤器
+
+
+
+父子组件的使用
 
 
 

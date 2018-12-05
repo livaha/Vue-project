@@ -24,6 +24,13 @@ import Moment from 'moment';
 
 /*引入全局组件*/
 
+/*定义全局过滤器*/
+/*convertDate为过滤器名，value为要过滤的值*/
+Vue.filter('convertDate',function(value){
+	console.log(value);
+	return Moment(value).format('YYYY-MM-DD');
+});
+
 
 /*引入自定义组件*/
 import App from './app.vue';

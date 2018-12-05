@@ -1,5 +1,6 @@
 <template>
     <div class="tmpl">
+    		<nav-bar title="新闻列表"></nav-bar>
 			<ul class="mui-table-view">
 				<li v-for="news in newsList" :key="news.id" class="mui-table-view-cell mui-media">
 					<router-link :to="{name:'news.detail',query:{id:news.id} }">

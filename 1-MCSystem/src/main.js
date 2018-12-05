@@ -23,6 +23,8 @@ Axios.defaults.baseUrl = 'http://127.0.0.1:8899/';
 import Moment from 'moment';
 
 /*引入全局组件*/
+import NavBar from './components/common/navBar.vue'
+Vue.component('navBar',NavBar);//使用最好以nav-bar
 
 /*定义全局过滤器*/
 /*convertDate为过滤器名，value为要过滤的值*/

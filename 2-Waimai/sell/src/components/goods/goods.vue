@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    Header
+    GOODS
   </div>
 </template>
 

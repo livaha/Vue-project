@@ -198,6 +198,10 @@ https://icomoon.io/
 
 2 视口   适应移动端
 
+
+
+# 语法严格模式
+
 3 .eslintrc.js文件
 
 //严格格式加';'
@@ -206,11 +210,45 @@ https://icomoon.io/
 
 
 
+
+
 # 6 flex布局
 
+https://juejin.im/post/5c08e9ea6fb9a049e6600c21
 
 
 
+# 7 CSS问题
+
+## 书写格式 
+
+样式布局写前面
+
+接下来是宽高
+
+最后是样式颜色等可被继承的
+
+## 1 postcss插件可以搞定css兼容问题。。
+
+1. 行内元素a转为块元素，点击的时候才可以一大块点击
+
+
+
+# 8 stylus样式
+
+&  父元素
+
+& > a 父元素的子元素active  
+
+&.active  父元素的active类样式
+
+
+
+# 9 vue-router
+
+https://router.vuejs.org/guide/#html
+
+linkActiveClass 被激活时TAB的样式
 
 
 

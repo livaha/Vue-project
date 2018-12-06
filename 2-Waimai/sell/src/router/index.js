@@ -14,5 +14,6 @@ const routes = [
 ];
 
 export default new Router({
-  routes
+  routes,
+  linkActiveClass: 'active'
 });

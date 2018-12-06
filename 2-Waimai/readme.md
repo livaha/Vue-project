@@ -252,3 +252,20 @@ linkActiveClass 被激活时TAB的样式
 
 
 
+### Router Construction Options
+
+#### linkActiveClass
+
+- type: `string`
+
+- default: `"router-link-active"`
+
+  Globally configure `<router-link>` default active class. Also see [router-link](https://router.vuejs.org/api/#router-link)
+
+~~~
+export default new Router({
+  routes,
+  linkActiveClass: 'active'
+});
+~~~
+

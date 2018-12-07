@@ -200,7 +200,7 @@ https://icomoon.io/
 
 
 
-# 语法严格模式
+# 语法严格模式Eslin
 
 3 .eslintrc.js文件
 
@@ -294,4 +294,93 @@ export default new Router({
 
 
 
+
+# 11. 实现通用的1像素border
+
+1像素在PC与手机上的显示
+
+![1544123826447](assets/1544123826447.png)
+
+上两和下1一样
+
+![1544123804094](assets/1544123804094.png)
+
+mixin.styl
+
+@import引用
+
+![1544124000594](assets/1544124000594.png)
+
+根据手机缩放
+
+![1544124225063](assets/1544124225063.png)
+
+![1544124263919](assets/1544124263919.png)
+
+
+
+![1544124281740](assets/1544124281740.png)
+
+
+
+![1544124372719](assets/1544124372719.png)
+
+可以改路径
+
+
+
+
+
+# 12 vue-resource
+
+https://github.com/pagekit/vue-resource/tree/e25df446e1e94f0134888d9bf8fc75bf8ce91d49
+
+
+
+https://github.com/pagekit/vue-resource/blob/e25df446e1e94f0134888d9bf8fc75bf8ce91d49/docs/http.md
+
+~~~
+
+import vueResource from 'vue-resource';
+
+Vue.use(vueResource);
+
+  import header from './components/header/header.vue';
+  export default{
+    created() {
+      // GET /someUrl
+      this.$http.get('/api/goods').then(response => {
+        // get body data
+        this.Data = response.body;
+        console.log(this.Data);
+      }, response => {
+        // error callback
+      });
+    }
+  };
+~~~
+
+
+
+
+
+# 13 created 生命周期
+
+Vue的一个生命周期，created
+
+ 这是它的一个生命周期[钩子函数](https://www.baidu.com/s?wd=%E9%92%A9%E5%AD%90%E5%87%BD%E6%95%B0&tn=44039180_cpr&fenlei=mv6quAkxTZn0IZRqIHckPjm4nH00T1Y4n1fLPyckrjTznHmknjfs0ZwV5Hcvrjm3rH6sPfKWUMw85HfYnjn4nH6sgvPsT6KdThsqpZwYTjCEQLGCpyw9Uz4Bmy-bIi4WUvYETgN-TLwGUv3EnHb4nWndrHRznW6zPHm1P1b3Ps)，就是一个vue实例被生成后调用这个函数。一个vue实例被生成后还要绑定到某个[html元素](https://www.baidu.com/s?wd=html%E5%85%83%E7%B4%A0&tn=44039180_cpr&fenlei=mv6quAkxTZn0IZRqIHckPjm4nH00T1Y4n1fLPyckrjTznHmknjfs0ZwV5Hcvrjm3rH6sPfKWUMw85HfYnjn4nH6sgvPsT6KdThsqpZwYTjCEQLGCpyw9Uz4Bmy-bIi4WUvYETgN-TLwGUv3EnHb4nWndrHRznW6zPHm1P1b3Ps)上，之后还要进行编译，然后再插入到document中。每一个阶段都会有一个[钩子函数](https://www.baidu.com/s?wd=%E9%92%A9%E5%AD%90%E5%87%BD%E6%95%B0&tn=44039180_cpr&fenlei=mv6quAkxTZn0IZRqIHckPjm4nH00T1Y4n1fLPyckrjTznHmknjfs0ZwV5Hcvrjm3rH6sPfKWUMw85HfYnjn4nH6sgvPsT6KdThsqpZwYTjCEQLGCpyw9Uz4Bmy-bIi4WUvYETgN-TLwGUv3EnHb4nWndrHRznW6zPHm1P1b3Ps)，方便开发者在不同阶段处理不同逻辑。
+
+一般可以在created函数中调用ajax获取页面[初始化](https://www.baidu.com/s?wd=%E5%88%9D%E5%A7%8B%E5%8C%96&tn=44039180_cpr&fenlei=mv6quAkxTZn0IZRqIHckPjm4nH00T1Y4n1fLPyckrjTznHmknjfs0ZwV5Hcvrjm3rH6sPfKWUMw85HfYnjn4nH6sgvPsT6KdThsqpZwYTjCEQLGCpyw9Uz4Bmy-bIi4WUvYETgN-TLwGUv3EnHb4nWndrHRznW6zPHm1P1b3Ps)所需的数据。
+
+## 实例生命周期
+
+每个 Vue 实例在被创建之前都要经过一系列的初始化过程。例如，实例需要配置数据观测(data observer)、编译模版、挂载实例到 DOM ，然后在数据变化时更新 DOM 。在这个过程中，实例也会调用一些 生命周期钩子 ，这就给我们提供了执行自定义逻辑的机会。例如，`created` 这个钩子在实例被创建之后被调用：
+
+也有一些其它的钩子，在实例生命周期的不同阶段调用，如 `mounted`、 `updated` 、`destroyed` 。钩子的 `this` 指向调用它的 Vue 实例。一些用户可能会问 Vue.js 是否有“控制器”的概念？答案是，没有。组件的自定义逻辑可以分布在这些钩子中。
+
+## 生命周期图示
+
+下图说明了实例的生命周期。你不需要立马弄明白所有的东西，不过以后它会有帮助。
+
+![Lifecycle](assets/lifecycle.png)
 

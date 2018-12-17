@@ -1,13 +1,14 @@
 <template>
 
       <ul class="todo-main">
-        <todo-item></todo-item>
+        <todo-item v-for="(todo ,index) in todos" :key="index" :todo="todo" :index="index" :deleteTodo="deleteTodo"></todo-item>
       </ul>
 </template>
 <script>
   import TodoItem from './TodoItem.vue'
 
   export default{
+    props:['todos','deleteTodo'],
     data(){
       return {
 

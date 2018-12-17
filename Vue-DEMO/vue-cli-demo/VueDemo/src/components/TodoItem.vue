@@ -1,18 +1,39 @@
 <template>
-        <li>
+        <li :style="{background:bgColor}" @mouseenter="handleEnter(true)" @mouseleave="handleEnter(false)">
           <label>
-            <input type="checkbox"/>
-            <span>xxxxx</span>
+            <input type="checkbox" v-model="todo.complete"/>
+            <span>{{todo.title}}</span>
           </label>
-          <button class="btn btn-danger" style="display:none">删除</button>
+          <button class="btn btn-danger" v-show="isShow" @click="delItem">删除</button>
         </li>
 </template>
 <script>
   export default{
+  	props:{
+  		todo:Object,
+  		index:Number,
+  		deleteTodo:Function
+  	},
     data(){
       return {
-        
+        bgColor:'#fff',
+        isShow:false
       }
+    },
+    methods:{
+    	handleEnter(isEnter){
+    		if(isEnter){
+    			this.bgColor="#ccc",
+    			this.isShow=true
+    		}
+    		else{    			
+    			this.bgColor="#fff",
+    			this.isShow=false
+    		}
+    	},
+    	delItem(){
+    		this.deleteTodo(this.index)
+    	}
     }
   }
 	

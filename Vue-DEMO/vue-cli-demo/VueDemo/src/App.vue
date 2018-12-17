@@ -3,8 +3,8 @@
 <div id="app">
   <div class="todo-container">
 	<div class="todo-wrap">
-		<todo-header></todo-header>
-		<todo-list></todo-list>
+		<todo-header :addTodo="addTodo"></todo-header>
+		<todo-list :todos="todos" :deleteTodo="deleteTodo"></todo-list>
 		<todo-footer></todo-footer>
 	</div>
   </div>
@@ -18,13 +18,21 @@
 	export default{
 		data(){
 		  return {
-			
+				todos:[{title:'inputTodo',complete:false},{title:'inputTodo',complete:false}]
 		  }
 		},
 		components:{
 			TodoHeader,
 			TodoFooter,
 			TodoList
+		},
+		methods:{
+			addTodo(todo){
+				this.todos.unshift(todo)
+			},
+			deleteTodo(index){
+				this.todos.splice(index,1)
+			}
 		}
 	}
 

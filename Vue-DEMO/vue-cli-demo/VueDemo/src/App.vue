@@ -5,7 +5,7 @@
 	<div class="todo-wrap">
 		<todo-header :addTodo="addTodo"></todo-header>
 		<todo-list :todos="todos" :deleteTodo="deleteTodo"></todo-list>
-		<todo-footer></todo-footer>
+		<todo-footer :todos="todos" :deleteCompleteTodos="deleteCompleteTodos" :selectAll="selectAll"></todo-footer>
 	</div>
   </div>
 </div>
@@ -32,6 +32,14 @@
 			},
 			deleteTodo(index){
 				this.todos.splice(index,1)
+			},
+			deleteCompleteTodos(){
+				this.todos=this.todos.filter(todo=>!todo.complete)
+			},
+			selectAll(isSelectAll){
+				this.todos.forEach(todo=>{
+					todo.complete = isSelectAll
+				})
 			}
 		}
 	}

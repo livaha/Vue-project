@@ -5,12 +5,6 @@
 </template>
 <script>
   export default{
-  	props:{
-  		addTodo:{
-  			type:Function,
-  			required:true
-  		}
-  	},
     data(){
       return {
         inputTodo:''
@@ -23,8 +17,10 @@
     			alert('必须输入')
     			return
     		}
+        // 封装一个todo对象
     		const todo = {title:inputTodo,complete:false}
-    		this.addTodo(todo)
+    		//this.addTodo(todo)
+        this.$emit('addTodo',todo)
     		this.inputTodo=''
     	}
     }

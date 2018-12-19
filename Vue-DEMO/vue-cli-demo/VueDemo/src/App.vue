@@ -4,7 +4,8 @@
   <div class="todo-container">
 	<div class="todo-wrap">
 		<!-- todo-header :addTodo="addTodo"></todo-header -->
-		<todo-header @addTodo="addTodo"></todo-header>
+		<!-- todo-header @addTodo="addTodo"></todo-header -->
+		<todo-header ref="header"></todo-header>
 		<todo-list :todos="todos" :deleteTodo="deleteTodo"></todo-list>
 		<todo-footer :todos="todos" :deleteCompleteTodos="deleteCompleteTodos" :selectAll="selectAll"></todo-footer>
 	</div>
@@ -45,7 +46,8 @@
 		},
 		mounted(){
 			//绑定自定义事件(addTodo)监听
-			this.$on('addTodo',this.addTodo)//绑定监听的目标
+			//this.$on('addTodo',this.addTodo)//绑定监听的目标
+			this.$refs.header.$on('addTodo',this.addTodo)
 		},
 		methods:{
 			addTodo(todo){

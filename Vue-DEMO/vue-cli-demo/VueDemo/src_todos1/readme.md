@@ -115,6 +115,49 @@ methods: {
 
 b. 用$refs，ref属性的绑定监听类型
 
+~~~vue
+app.vue
+		<!-- todo-header @addTodo="addTodo"></todo-header -->
+		<todo-header ref="header"></todo-header>
+<script>
+		mounted(){
+			//绑定自定义事件(addTodo)监听
+			//this.$on('addTodo',this.addTodo)//绑定监听的目标
+			this.$refs.header.$on('addTodo',this.addTodo)
+		},
+</script>
+
+
+
+
+//----------TodoHeader.vue
+ <div class="todo-header">
+    <input type="text" placeholder="请输入你的任务名称，按回车键确认" v-model="inputTodo" @keyup.enter="add"/>
+  </div>
+...
+<script>
+methods: {
+  add () {
+    // 得到输入的数据
+    const inputTodo = this.inputTodo.trim()
+    // 检查合法性
+    if(!inputTodo) {
+      alert('必须输入')
+      return
+    }
+    // 封装一个todo对象
+    const todo = {title:inputTodo,complete:false}
+    // 添加到todos中显示
+    /*触发自定义事件: addTodo*/
+    this.$emit('addTodo', todo)
+    // 清除输入
+    this.inputTodo = ''
+  }
+}
+</script>
+
+~~~
+
 
 
 

@@ -8,11 +8,11 @@
         </li>
 </template>
 <script>
+  import PubSub from 'pubsub-js'
   export default{
   	props:{
   		todo:Object,
-  		index:Number,
-  		deleteTodo:Function
+  		index:Number
   	},
     data(){
       return {
@@ -32,7 +32,9 @@
     		}
     	},
     	delItem(){
-    		this.deleteTodo(this.index)
+    		//this.deleteTodo(this.index)
+        //发布消息(deleteTodo)
+        PubSub.publish('deleteTodo',this.index)
     	}
     }
   }

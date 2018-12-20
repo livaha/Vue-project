@@ -17,6 +17,7 @@
 	import TodoList from './components/TodoList.vue'
 	import TodoFooter from './components/TodoFooter.vue'
 	import storageUtils from './utils/storageUtils'
+	import PubSub from 'pubsub-js'
 
 	export default{
 		data(){
@@ -48,6 +49,10 @@
 			//绑定自定义事件(addTodo)监听
 			//this.$on('addTodo',this.addTodo)//绑定监听的目标
 			this.$refs.header.$on('addTodo',this.addTodo)
+			//订阅消息（监听事件的发生）
+			PubSub.subscribe('deleteTodo',(msg,index)=>{
+				this.deleteTodo(index)
+			})
 		},
 		methods:{
 			addTodo(todo){

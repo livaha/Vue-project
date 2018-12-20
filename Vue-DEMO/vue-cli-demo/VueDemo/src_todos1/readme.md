@@ -160,11 +160,48 @@ methods: {
 
 
 
-
-
-
-
 3-消息订阅与发布
+
+https://blog.csdn.net/wangchaohpu/article/details/84403348
+
+优点：可以进行任意组件间的信息传递。 
+
+比如在app.vue里面订阅（监听 ）信息，要在列表项里面发布信息。
+
+这是父孙组件之间的通信，并不需要通过子组件传递、
+
+~~~javascript
+父组件： -----app.vue
+  import PubSub from 'pubsub-js'
+    mounted () {
+      // 订阅消息(deleteTodo)
+      PubSub.subscribe('deleteTodo', (msg, index) => {
+        this.deleteTodo(index)
+      })
+    },
+
+    methods: {
+      deleteTodo (index) {
+        this.todos.splice(index, 1)
+      },
+    }
+
+
+子组件：------TodoList.vue
+无内容 
+
+
+孙组件：------TodoaItem.vue
+  import PubSub from 'pubsub-js'
+    methods: {
+      deleteItem () {
+        // this.deleteTodo(this.index)
+        // 发布消息(deleteTodo)
+        PubSub.publish('deleteTodo', this.index)
+      }
+    }
+  }
+~~~
 
 
 
